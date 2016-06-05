@@ -1,0 +1,6 @@
+2016-06-05 11:19:54,373 - com.assignment.service.DuplicateDeleteService - DEBUG - Duplicates removed printing output ::1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,10000,16,17,18,19,20,85,86,25,26,34,43,45
+2016-06-05 11:19:54,381 - com.assignment.service.DuplicateDeleteService - DEBUG - Duplicates removed with order using LinkedHashSet ::[1, 2, 34, 25, 45, 3, 26, 85, 4, 86, 43, 10000, 11, 16, 19, 18, 9, 20, 17, 8, 15, 6, 5, 10, 14, 12, 13, 7]
+2016-06-05 11:19:54,382 - com.assignment.service.DuplicateDeleteService - DEBUG - Duplicates removed printing output ::1,2,34,25,45,3,26,85,4,86,43,10000,11,16,19,18,9,20,17,8,15,6,5,10,14,12,13,7
+2016-06-05 11:20:03,392 - com.assignment.service.DuplicateDeleteService - DEBUG - Duplicates removed printing output ::1,2,3,4,5,6,89,7,100
+2016-06-05 11:20:03,584 - com.assignment.service.DuplicateDeleteService - DEBUG - Duplicates removed printing output ::1,2,3,4,100,5,6,7,89
+2016-06-05 11:20:03,586 - com.assignment.service.DuplicateDeleteService - DEBUG - Duplicates removed with order using LinkedHashSet ::[1, 2, 3, 4, 5, 6, 89, 7, 100]
