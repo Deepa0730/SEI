@@ -1,0 +1,23 @@
+org.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger
+Log=org.apache.commons.logging.impl.Jdk14Logger
+
+# The following creates two handlers
+handlers=java.util.logging.ConsoleHandler, java.util.logging.FileHandler
+
+# Set the default logging level for the root logger
+.level=DEBUG
+# log level for the "com.tutorialspoint.struts2" package
+com.tutorialspoint.struts2.level=FINE
+
+# Set the default logging level
+java.util.logging.ConsoleHandler.level=ALL
+java.util.logging.FileHandler.level=FINE
+
+# Set the default formatter
+java.util.logging.ConsoleHandler.formatter=java.util.logging.SimpleFormatter
+java.util.logging.FileHandler.formatter=java.util.logging.SimpleFormatter
+
+# Specify the location and name of the log file
+java.util.logging.FileHandler.pattern=C:/Users/deepa/log/log-test.log
+
+

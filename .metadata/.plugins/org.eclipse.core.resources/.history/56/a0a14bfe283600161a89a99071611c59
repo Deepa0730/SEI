@@ -1,0 +1,263 @@
+package com.fileupload.services;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+
+import com.fileupload.model.UploadFileModel;
+
+public class UploadFileService {
+	private static final Logger log = Logger.getLogger(UploadFileService.class);
+
+	public List<UploadFileModel> Readfile(File fileUpload) {
+
+		List<UploadFileModel> fileList = new ArrayList<UploadFileModel>();
+
+		try {
+
+			log.debug("Inside Readfile Method of UploadFileService");
+			BufferedReader reader = new BufferedReader(new FileReader(fileUpload));
+			String line = null;
+			Scanner scanner = null;
+			int index = 0;
+			String data = null;
+			HashSet<String> checkset = new HashSet<String>();
+
+			while ((line = reader.readLine()) != null) {
+				// Number of elements in each line
+				String[] fields = line.split(",");
+				Integer countFields = fields.length;
+				log.debug("Number of elements:::" + fields.length);
+				UploadFileModel model = new UploadFileModel();
+				scanner = new Scanner(line);
+				scanner.useDelimiter(",");
+				String d1 = null;
+				String d2 = null;
+				String d3 = null;
+				String d4 = null;
+				String unikey = "";
+				boolean checkIdentical = true;
+				boolean endofline = false;
+
+				boolean flag1 = false;
+				boolean flag2 = false;
+				boolean flag3 = false;
+				while (scanner.hasNext()) {
+					data = scanner.next();
+					if (index == 0) {
+						flag1 = true;
+						if (data.contains("T")) {
+							System.out.println("First field is date");
+							d1 = data;
+						} else {
+							d2 = data;
+						}
+
+					} else if (index == 1) {
+						flag2 = true;
+						try {
+							Integer.parseInt(data);
+							System.out.println("Rownumber is present ::" + data);
+							d2 = data;
+						} catch (NumberFormatException ex) {
+							System.out.println("Its not a number but description");
+							d3 = data;
+						}
+					} else if (index == 2) {
+						flag3 = true;
+						try {
+							Double.parseDouble(data);
+							System.out.println("Description is not present,dollar value is present ");
+							d4 = data;
+						} catch (NumberFormatException nex) {
+							System.out.println("Description is present");
+							d3 = data;
+						}
+
+					} else if (index == 3) {
+						flag4 = true;
+						try {
+							endofline = true;
+							Double.parseDouble(data);
+							System.out.println("Last value is dollar value");
+							d4 = data;
+						} catch (NumberFormatException nex) {
+							endofline = true;
+							System.out.println("setting last value as null");
+
+						}
+					} else
+						log.debug("Invalid Input");
+
+					System.out.println("Total Values ::::" + d1 + d2 + d3 + d4);
+					System.out.println("Total fields :::" + countFields);
+					if (countFields == 2 && (flag1 && flag2)) {
+						System.out.println("Inside another complexity");
+						if (d1 == null)
+							model.setFileDate("");
+						else
+							model.setFileDate(formatDate(d1));
+						if (d2 == null)
+							model.setFileRow(0);
+						else
+							model.setFileRow(Integer.parseInt(d2));
+						if (d3 == null)
+							model.setFileDesc("");
+						else
+							model.setFileDesc(d3);
+						if (d4 == null)
+							model.setFileValue("");
+						else
+							model.setFileValue(formatValue(d4));
+
+					}
+
+					if (countFields == 3 && (flag1 && flag2 && flag3)) {
+
+						System.out.println("date has a value" + d1);
+						if (d1 == null) {
+							d1 = "";
+							model.setFileDate("");
+						} else
+							model.setFileDate(formatDate(d1));
+						System.out.println("Row number has a value " + d2);
+						if (d2 == null) {
+							d2 = "";
+							model.setFileRow(0);
+						} else
+							model.setFileRow(Integer.parseInt(d2));
+
+						if (d3 == null) {
+							d3 = "";
+							model.setFileDesc("");
+						} else
+							model.setFileDesc(d3);
+						System.out.println("Description has a value" + d3);
+
+						if (d4 == null) {
+							d4 = "";
+							model.setFileValue("");
+						} else
+							model.setFileValue(formatValue(d4));
+						System.out.println("Value " + d4);
+					} else if (endofline) {
+						unikey = (d1.trim() + d3.trim()).trim();
+						if ((checkset.contains(unikey))) {
+							checkIdentical = false;
+						} else {
+							checkset.add(unikey);
+							if (!(d1.equals("")))
+								model.setFileDate(formatDate(d1));
+							model.setFileRow(Integer.parseInt(d2));
+							model.setFileDesc(d3);
+							if (!(d4.equals("")))
+								model.setFileValue(formatValue(d4));
+							d1 = "";
+							d2 = "";
+							d3 = "";
+							d4 = "";
+						}
+					}
+					System.out.println("Incrementing index");
+					index++;
+				}
+
+				if (checkIdentical)
+					fileList.add(model);
+				index = 0;
+				System.out.println("Index made 0 and model added in list");
+
+			}
+			scanner.close();
+			reader.close();
+		}
+
+		catch (
+
+		Exception e) {
+			log.error("Exception thrown in Readfile method of UploadFileService ::" + e);
+		}
+		return fileList;
+	}
+
+	public String formatDate(String orgDate) {
+
+		log.debug("Inside formatDate method of UploadFileAction::");
+		String noleadMnth = null;
+		String noleadDate = null;
+		String yearlastTwo;
+		String finalTime = null;
+		String outputTimeZone = null;
+
+		StringBuffer strbff = new StringBuffer(orgDate);
+		String onlyMonth = strbff.substring(0, 2);
+
+		Integer month = new Integer(onlyMonth.substring(0, 2));
+		if (month < 10) {
+			noleadMnth = onlyMonth.substring(1);
+
+		} else {
+			noleadMnth = onlyMonth;
+		}
+		String onlyDate = strbff.substring(3, 5);
+
+		Integer date = new Integer(onlyDate);
+		if (date < 10) {
+			noleadDate = onlyDate.substring(1);
+
+		} else {
+			noleadDate = onlyDate;
+		}
+		yearlastTwo = strbff.substring(8, 10);
+
+		String time = strbff.substring(11, 19);
+
+		DateFormat timeformat = new SimpleDateFormat("h:mm");
+		Date formatteddate = null;
+		try {
+			formatteddate = timeformat.parse(time);
+			SimpleDateFormat output = new SimpleDateFormat("h:mm aa");
+
+			finalTime = output.format(formatteddate);
+
+		} catch (Exception e) {
+			log.error("Exception in formatting date" + e);
+		}
+
+		String timeZone = strbff.substring(19);
+
+		if (timeZone.equals("Z"))
+			outputTimeZone = "EDT";
+		// Final Date Output
+		String finalDateOutput = noleadMnth + "/" + noleadDate + "/" + yearlastTwo + " " + finalTime + " "
+				+ outputTimeZone;
+		log.debug("Date input from file ::::::" + orgDate);
+		log.debug("Final Date Output::::::::" + finalDateOutput);
+		return finalDateOutput;
+
+	}
+
+	public String formatValue(String val) {
+		String valueset = "";
+		try {
+			log.debug("Inside formatValue method of UploadFileService");
+			DecimalFormat moneyformat = new DecimalFormat("$0.00");
+			Double valuedo = Double.parseDouble(val);
+			valueset = moneyformat.format(valuedo);
+		} catch (Exception ex) {
+			log.error("Exception in formatValue method of UploadFileServie ::" + ex);
+		}
+		return valueset;
+	}
+
+}

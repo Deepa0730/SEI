@@ -1,0 +1,102 @@
+package com.fileupload.action;
+
+import java.io.File;
+
+import com.fileupload.model.*;
+import com.fileupload.services.*;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ValidationAware;
+
+import org.apache.commons.io.FilenameUtils;
+import org.apache.log4j.Logger;
+import org.apache.struts2.util.ServletContextAware;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.servlet.ServletContext;
+
+public class UploadFileAction extends ActionSupport {
+
+	private static final long serialVersionUID = 1L;
+	
+	private static Logger log = Logger.getLogger(UploadFileAction.class);
+
+	private File file;
+	private String contentType;
+	private String filename;
+	UploadFileService service = new UploadFileService();
+	UploadFileModel model = new UploadFileModel();
+
+	private List fileList;
+//	private ServletContext servletContext;
+	
+	
+	
+
+/*	public ServletContext getServletContext() {
+		return servletContext;
+	}
+
+	public void setServletContext(ServletContext servletContext) {
+		this.servletContext = servletContext;
+	}*/
+
+	public List getFileList() {
+		return fileList;
+	}
+
+	public void setFileList(List fileList) {
+		this.fileList = fileList;
+	}
+
+	public void setUpload(File file){
+		this.file = file;
+	}
+	public void setUploadContentType (String contentType){
+		this.contentType = contentType;
+	}
+	public void setUploadFileName (String filename){
+		this.filename = filename;
+	}
+	
+	
+
+	public UploadFileAction() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String display() {
+		return NONE;
+	}
+
+	public String execute() {
+
+		try {
+			fileList = service.Readfile(file);
+			System.out.println("File Content type ::");
+			addActionMessage("File uploaded successfully");
+			} catch (Exception e) {
+			log.error("Error inside execute method of UploadFileAction::"+e);	
+			addActionError("Error occurred during uploading of file");
+			return INPUT;
+		}
+
+		return SUCCESS;
+
+	}
+
+	@Override
+	public void validate() {
+		if (fileUpload == null) {
+			addActionError("You must select a file");
+		}
+		
+		else{
+			
+			
+		}
+
+	}
+
+}

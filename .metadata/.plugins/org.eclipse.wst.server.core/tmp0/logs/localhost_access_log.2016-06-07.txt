@@ -1,0 +1,6 @@
+127.0.0.1 - - [07/Jun/2016:14:28:45 -0400] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [07/Jun/2016:14:28:55 -0400] "GET /HelloWorldStruts2/ HTTP/1.1" 200 985
+0:0:0:0:0:0:0:1 - - [07/Jun/2016:15:00:45 -0400] "POST /HelloWorldStruts2/UploadFile.action;jsessionid=4E617A3FA327A7AD145AC76BDB744229 HTTP/1.1" 200 301
+0:0:0:0:0:0:0:1 - - [07/Jun/2016:15:13:09 -0400] "POST /HelloWorldStruts2/UploadFile.action;jsessionid=4E617A3FA327A7AD145AC76BDB744229 HTTP/1.1" 200 301
+0:0:0:0:0:0:0:1 - - [07/Jun/2016:15:16:27 -0400] "GET /HelloWorldStruts2/ HTTP/1.1" 200 941
+0:0:0:0:0:0:0:1 - - [07/Jun/2016:15:16:37 -0400] "POST /HelloWorldStruts2/UploadFile.action HTTP/1.1" 200 301

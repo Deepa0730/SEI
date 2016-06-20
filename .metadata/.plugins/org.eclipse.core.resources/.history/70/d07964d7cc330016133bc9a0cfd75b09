@@ -1,0 +1,5 @@
+org.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger
+logger=org.apache.commons.logging.impl.Jdk14Logger
+logger.configuration.name=java.util.logging.config .file
+logger.configuration.value=log-config.properties
+

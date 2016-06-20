@@ -1,0 +1,4 @@
+org.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger
+Log=org.apache.commons.logging.impl.Jdk14Logger
+
+

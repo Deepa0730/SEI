@@ -1,0 +1,208 @@
+package com.fileupload.services;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.Format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import com.fileupload.model.UploadFileModel;
+import com.opensymphony.xwork2.Action;
+
+import org.joda.time.*;
+import org.joda.time.chrono.ISOChronology;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
+public class UploadFileService {
+	
+	public List Readfile(File fileUpload){
+		
+		List <UploadFileModel> fileList = new ArrayList();
+		
+		try{
+			System.out.println("Inside service method");
+		
+			BufferedReader reader = new BufferedReader(new FileReader(fileUpload));
+			String line = null;
+			Scanner scanner = null;
+			int index =0;
+			String data = null;
+			HashSet<String> checkset = new HashSet<String>();
+			while ((line=reader.readLine())!=null)
+			{
+				System.out.println("Inside while loop");
+				UploadFileModel model = new UploadFileModel();
+				scanner =new Scanner(line);
+				scanner.useDelimiter(",");
+				String d1="";
+				String d2="";
+				String d3="";
+				String d4="";
+				String unikey ="";
+				boolean checkIdentical =true;
+				
+				while(scanner.hasNext())
+				{	
+					data = scanner.next();
+						if(index==0)
+						{ 
+							
+							 d1=data;
+							}
+							else if(index ==1)
+							{	
+								d2= data;
+							}
+							else if(index ==2)
+							{	d3=data;
+								}
+							else if (index==3)
+							{	
+								d4=data;
+								}
+							else
+								System.out.println("Invalid Output");
+						
+						if(!(d4.equals(""))) 
+						
+						{
+							 unikey= (d1.trim()+d3.trim()).trim();
+							System.out.println("Here we shoudl get all values::"+d1+d2+d3+d4);
+							System.out.println("Unique key ::"+unikey);
+							boolean flag = checkset.contains(unikey);
+							System.out.println("Flag print %%%%%%%%%%%%%%%%%"+flag);
+							if((checkset.contains(unikey)))
+							{
+								System.out.println("Dont add in this ");
+								checkIdentical=false;
+								
+							}
+							else{
+								System.out.println("Adding all values to model");
+								checkset.add(unikey);
+								if(!(d1.equals("")))
+								model.setFileDate(formatDate(d1));
+								model.setFileRow(Integer.parseInt(d2));
+								model.setFileDesc(d3);
+								if(!(d4.equals("")))
+								model.setFileValue(formatValue(d4));
+								d1="";d2="";d3="";d4="";
+								
+							}
+						}
+						System.out.println("HashSet total values "+checkset.size());
+							
+				
+				 index++;
+				  
+				}
+				System.out.println("Outside loop Data;"+ data);
+				if(checkIdentical)
+				fileList.add(model);
+				System.out.println("Printing List "+fileList);
+				index=0;
+				
+			}
+			reader.close();
+		}
+	
+
+		catch(Exception e)
+		{
+			
+		}
+		return fileList;
+	
+		}
+		
+	public String formatDate(String orgDate)
+	{ 
+		
+		String noleadMnth = null;
+		String noleadDate = null;
+		String yearlastTwo;
+		String finalTime = null;
+		String outputTimeZone = null;
+	
+		StringBuffer strbff = new StringBuffer(orgDate);
+		String onlyMonth = strbff.substring(0, 2);
+		System.out.println("Month ::"+onlyMonth);
+		Integer month =new Integer (onlyMonth.substring(0, 2));
+		if (month<10){
+			 noleadMnth = onlyMonth.substring(1);
+			System.out.println("No leading month"+noleadMnth);
+		}
+		else{
+			noleadMnth = onlyMonth;
+		}
+		String onlyDate = strbff.substring(3, 5);
+		System.out.println("Date ::"+onlyDate);
+		Integer date = new Integer(onlyDate);
+		if (date<10)
+		{
+			 noleadDate = onlyDate.substring(1);
+			System.out.println("No Leading Date::"+noleadDate);
+		}else 
+		{
+			noleadDate = onlyDate;
+		}
+		yearlastTwo = strbff.substring(8, 10);
+		System.out.println("Year in 4 digit "+yearlastTwo);
+		
+		String time = strbff.substring(11, 19);
+		System.out.println("Time ::"+time);
+		
+		DateFormat timeformat = new SimpleDateFormat("h:mm");
+		Date formatteddate = null;
+		try {
+			formatteddate = timeformat.parse(time);
+		SimpleDateFormat output = new SimpleDateFormat("h:mm aa");
+		System.out.println("Finally getting time ::"+output.format(formatteddate)); 
+		finalTime = output.format(formatteddate);
+		
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String timeZone = strbff.substring(19);
+		System.out.println("timezone "+timeZone);
+		if (timeZone.equals("Z"))
+			  outputTimeZone = "EDT";
+		// Final Date Output 
+		String finalDateOutput = noleadMnth+"/"+noleadDate+"/"+yearlastTwo+" "+finalTime+" "+outputTimeZone;
+		System.out.println("Original Date:::::::::::::"+orgDate);
+		System.out.println("Final Date Output ::::::::"+finalDateOutput);
+		return finalDateOutput;
+		
+	}
+	
+	public String formatValue(String val){
+		
+		DecimalFormat moneyformat = new DecimalFormat("$0.00");
+		Double valuedo = Double.parseDouble(val);
+		System.out.println("Double value :::"+valuedo);
+		String valueset = moneyformat.format(valuedo);
+		System.out.println(valueset);
+		
+		return valueset;
+	}
+	
+	
+
+}

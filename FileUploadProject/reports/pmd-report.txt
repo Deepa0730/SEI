@@ -1,0 +1,233 @@
+src/com/fileupload/action/UploadFileAction.java:8:	Avoid unused imports such as 'com.opensymphony.xwork2.ValidationAware'
+src/com/fileupload/action/UploadFileAction.java:12:	Avoid unused imports such as 'java.util.Arrays'
+src/com/fileupload/action/UploadFileAction.java:17:	headerCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:21:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:22:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:23:	Avoid excessively long variable names like fileUploadFileName
+src/com/fileupload/action/UploadFileAction.java:23:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/fileupload/action/UploadFileAction.java:24:	Use explicit scoping instead of the default package private level
+src/com/fileupload/action/UploadFileAction.java:24:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:25:	Use explicit scoping instead of the default package private level
+src/com/fileupload/action/UploadFileAction.java:25:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:27:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:28:	fieldCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:30:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:34:	Parameter 'servletContext' is not assigned and could be declared final
+src/com/fileupload/action/UploadFileAction.java:34:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:38:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:42:	Parameter 'fileList' is not assigned and could be declared final
+src/com/fileupload/action/UploadFileAction.java:42:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:46:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:50:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:54:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:59:	Parameter 'fileUpload' is not assigned and could be declared final
+src/com/fileupload/action/UploadFileAction.java:59:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:63:	Parameter 'fileContentType' is not assigned and could be declared final
+src/com/fileupload/action/UploadFileAction.java:63:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:67:	Avoid excessively long variable names like fileUploadFileName
+src/com/fileupload/action/UploadFileAction.java:67:	Parameter 'fileUploadFileName' is not assigned and could be declared final
+src/com/fileupload/action/UploadFileAction.java:67:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:73:	Avoid unnecessary constructors - the compiler will generate these for you
+src/com/fileupload/action/UploadFileAction.java:73:	It is a good practice to call super() in a constructor
+src/com/fileupload/action/UploadFileAction.java:73:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:77:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:81:	publicMethodCommentRequirement Required
+src/com/fileupload/action/UploadFileAction.java:86:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/com/fileupload/action/UploadFileAction.java:88:	Avoid printStackTrace(); use a logger call instead.
+src/com/fileupload/action/UploadFileAction.java:88:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/action/UploadFileAction.java:90:	A method should have only one exit point, and that should be the last statement in the method
+src/com/fileupload/action/UploadFileAction.java:98:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:3:	Avoid unused imports such as 'java.util.List'
+src/com/fileupload/model/UploadFileModel.java:5:	Each class should declare at least one constructor
+src/com/fileupload/model/UploadFileModel.java:5:	headerCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:7:	fieldCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:8:	fieldCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:9:	fieldCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:10:	fieldCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:12:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:16:	Parameter 'fileDate' is not assigned and could be declared final
+src/com/fileupload/model/UploadFileModel.java:16:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:20:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:24:	Parameter 'fileRow' is not assigned and could be declared final
+src/com/fileupload/model/UploadFileModel.java:24:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:28:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:32:	Parameter 'fileValue' is not assigned and could be declared final
+src/com/fileupload/model/UploadFileModel.java:32:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:36:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:40:	Parameter 'fileDesc' is not assigned and could be declared final
+src/com/fileupload/model/UploadFileModel.java:40:	publicMethodCommentRequirement Required
+src/com/fileupload/model/UploadFileModel.java:45:	publicMethodCommentRequirement Required
+src/com/fileupload/services/UploadFileService.java:6:	Avoid unused imports such as 'java.io.IOException'
+src/com/fileupload/services/UploadFileService.java:7:	Avoid unused imports such as 'java.nio.file.Path'
+src/com/fileupload/services/UploadFileService.java:8:	Avoid unused imports such as 'java.nio.file.Paths'
+src/com/fileupload/services/UploadFileService.java:11:	Avoid unused imports such as 'java.text.Format'
+src/com/fileupload/services/UploadFileService.java:12:	Avoid unused imports such as 'java.text.ParseException'
+src/com/fileupload/services/UploadFileService.java:15:	Avoid unused imports such as 'java.util.Calendar'
+src/com/fileupload/services/UploadFileService.java:17:	Avoid unused imports such as 'java.util.HashMap'
+src/com/fileupload/services/UploadFileService.java:20:	Avoid unused imports such as 'java.util.Locale'
+src/com/fileupload/services/UploadFileService.java:24:	Avoid unused imports such as 'com.opensymphony.xwork2.Action'
+src/com/fileupload/services/UploadFileService.java:27:	Avoid unused imports such as 'org.joda.time.chrono.ISOChronology'
+src/com/fileupload/services/UploadFileService.java:28:	Avoid unused imports such as 'org.joda.time.format.DateTimeFormat'
+src/com/fileupload/services/UploadFileService.java:29:	Avoid unused imports such as 'org.joda.time.format.DateTimeFormatter'
+src/com/fileupload/services/UploadFileService.java:31:	Each class should declare at least one constructor
+src/com/fileupload/services/UploadFileService.java:31:	The class 'UploadFileService' has a Cyclomatic Complexity of 7 (Highest = 13).
+src/com/fileupload/services/UploadFileService.java:31:	The class 'UploadFileService' has a Modified Cyclomatic Complexity of 7 (Highest = 13).
+src/com/fileupload/services/UploadFileService.java:31:	The class 'UploadFileService' has a Standard Cyclomatic Complexity of 7 (Highest = 13).
+src/com/fileupload/services/UploadFileService.java:31:	headerCommentRequirement Required
+src/com/fileupload/services/UploadFileService.java:33:	Method names should not start with capital letters
+src/com/fileupload/services/UploadFileService.java:33:	Parameter 'fileUpload' is not assigned and could be declared final
+src/com/fileupload/services/UploadFileService.java:33:	The method 'Readfile' has a Cyclomatic Complexity of 13.
+src/com/fileupload/services/UploadFileService.java:33:	The method 'Readfile' has a Modified Cyclomatic Complexity of 13.
+src/com/fileupload/services/UploadFileService.java:33:	The method 'Readfile' has a Standard Cyclomatic Complexity of 13.
+src/com/fileupload/services/UploadFileService.java:33:	publicMethodCommentRequirement Required
+src/com/fileupload/services/UploadFileService.java:35:	Local variable 'fileList' could be declared final
+src/com/fileupload/services/UploadFileService.java:38:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:40:	Local variable 'reader' could be declared final
+src/com/fileupload/services/UploadFileService.java:41:	Found 'DD'-anomaly for variable 'line' (lines '41'-'46').
+src/com/fileupload/services/UploadFileService.java:42:	Found 'DD'-anomaly for variable 'scanner' (lines '42'-'49').
+src/com/fileupload/services/UploadFileService.java:44:	Found 'DD'-anomaly for variable 'data' (lines '44'-'59').
+src/com/fileupload/services/UploadFileService.java:45:	Local variable 'checkset' could be declared final
+src/com/fileupload/services/UploadFileService.java:46:	Avoid assignments in operands
+src/com/fileupload/services/UploadFileService.java:46:	Found 'DU'-anomaly for variable 'line' (lines '46'-'120').
+src/com/fileupload/services/UploadFileService.java:46:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:47:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:48:	Avoid instantiating new objects inside loops
+src/com/fileupload/services/UploadFileService.java:48:	Found 'DU'-anomaly for variable 'model' (lines '48'-'120').
+src/com/fileupload/services/UploadFileService.java:48:	Local variable 'model' could be declared final
+src/com/fileupload/services/UploadFileService.java:49:	Avoid instantiating new objects inside loops
+src/com/fileupload/services/UploadFileService.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:51:	Avoid variables with short names like d1
+src/com/fileupload/services/UploadFileService.java:51:	Found 'DD'-anomaly for variable 'd1' (lines '51'-'62').
+src/com/fileupload/services/UploadFileService.java:51:	Found 'DU'-anomaly for variable 'd1' (lines '51'-'120').
+src/com/fileupload/services/UploadFileService.java:52:	Avoid variables with short names like d2
+src/com/fileupload/services/UploadFileService.java:52:	Found 'DD'-anomaly for variable 'd2' (lines '52'-'64').
+src/com/fileupload/services/UploadFileService.java:52:	Found 'DU'-anomaly for variable 'd2' (lines '52'-'120').
+src/com/fileupload/services/UploadFileService.java:53:	Avoid variables with short names like d3
+src/com/fileupload/services/UploadFileService.java:53:	Found 'DD'-anomaly for variable 'd3' (lines '53'-'66').
+src/com/fileupload/services/UploadFileService.java:53:	Found 'DU'-anomaly for variable 'd3' (lines '53'-'120').
+src/com/fileupload/services/UploadFileService.java:54:	Avoid variables with short names like d4
+src/com/fileupload/services/UploadFileService.java:54:	Found 'DD'-anomaly for variable 'd4' (lines '54'-'68').
+src/com/fileupload/services/UploadFileService.java:55:	Found 'DD'-anomaly for variable 'unikey' (lines '55'-'75').
+src/com/fileupload/services/UploadFileService.java:55:	Found 'DU'-anomaly for variable 'unikey' (lines '55'-'120').
+src/com/fileupload/services/UploadFileService.java:56:	Found 'DD'-anomaly for variable 'checkIdentical' (lines '56'-'82').
+src/com/fileupload/services/UploadFileService.java:58:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:59:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:62:	Found 'DD'-anomaly for variable 'd1' (lines '62'-'62').
+src/com/fileupload/services/UploadFileService.java:62:	Found 'DU'-anomaly for variable 'd1' (lines '62'-'120').
+src/com/fileupload/services/UploadFileService.java:63:	Avoid using Literals in Conditional Statements
+src/com/fileupload/services/UploadFileService.java:64:	Found 'DU'-anomaly for variable 'd2' (lines '64'-'120').
+src/com/fileupload/services/UploadFileService.java:65:	Avoid using Literals in Conditional Statements
+src/com/fileupload/services/UploadFileService.java:66:	Found 'DU'-anomaly for variable 'd3' (lines '66'-'120').
+src/com/fileupload/services/UploadFileService.java:67:	Avoid using Literals in Conditional Statements
+src/com/fileupload/services/UploadFileService.java:70:	Avoid using if...else statements without curly braces
+src/com/fileupload/services/UploadFileService.java:70:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:72:	Position literals first in String comparisons
+src/com/fileupload/services/UploadFileService.java:72:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:75:	Potential violation of Law of Demeter (method chain calls)
+src/com/fileupload/services/UploadFileService.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:76:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:77:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:78:	Local variable 'flag' could be declared final
+src/com/fileupload/services/UploadFileService.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:79:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:80:	This statement may have some unnecessary parentheses
+src/com/fileupload/services/UploadFileService.java:80:	Useless parentheses.
+src/com/fileupload/services/UploadFileService.java:80:	Useless parentheses.
+src/com/fileupload/services/UploadFileService.java:81:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:82:	Found 'DD'-anomaly for variable 'checkIdentical' (lines '82'-'82').
+src/com/fileupload/services/UploadFileService.java:85:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:86:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:87:	Avoid using if statements without curly braces
+src/com/fileupload/services/UploadFileService.java:87:	Position literals first in String comparisons
+src/com/fileupload/services/UploadFileService.java:87:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:88:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:89:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:90:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:91:	Avoid using if statements without curly braces
+src/com/fileupload/services/UploadFileService.java:91:	Position literals first in String comparisons
+src/com/fileupload/services/UploadFileService.java:91:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:92:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:93:	Found 'DD'-anomaly for variable 'd1' (lines '93'-'62').
+src/com/fileupload/services/UploadFileService.java:93:	Found 'DU'-anomaly for variable 'd1' (lines '93'-'120').
+src/com/fileupload/services/UploadFileService.java:94:	Found 'DD'-anomaly for variable 'd2' (lines '94'-'64').
+src/com/fileupload/services/UploadFileService.java:94:	Found 'DU'-anomaly for variable 'd2' (lines '94'-'120').
+src/com/fileupload/services/UploadFileService.java:95:	Found 'DD'-anomaly for variable 'd3' (lines '95'-'66').
+src/com/fileupload/services/UploadFileService.java:95:	Found 'DU'-anomaly for variable 'd3' (lines '95'-'120').
+src/com/fileupload/services/UploadFileService.java:96:	Found 'DD'-anomaly for variable 'd4' (lines '96'-'68').
+src/com/fileupload/services/UploadFileService.java:96:	Found 'DU'-anomaly for variable 'd4' (lines '96'-'120').
+src/com/fileupload/services/UploadFileService.java:100:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:100:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:102:	Found 'DD'-anomaly for variable 'index' (lines '102'-'109').
+src/com/fileupload/services/UploadFileService.java:105:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:106:	Avoid using if statements without curly braces
+src/com/fileupload/services/UploadFileService.java:107:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:108:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:109:	Found 'DU'-anomaly for variable 'index' (lines '109'-'120').
+src/com/fileupload/services/UploadFileService.java:112:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:115:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/com/fileupload/services/UploadFileService.java:115:	Avoid empty catch blocks
+src/com/fileupload/services/UploadFileService.java:115:	Avoid empty catch blocks
+src/com/fileupload/services/UploadFileService.java:122:	Parameter 'orgDate' is not assigned and could be declared final
+src/com/fileupload/services/UploadFileService.java:122:	publicMethodCommentRequirement Required
+src/com/fileupload/services/UploadFileService.java:124:	Found 'DD'-anomaly for variable 'noleadMnth' (lines '124'-'135').
+src/com/fileupload/services/UploadFileService.java:124:	Found 'DD'-anomaly for variable 'noleadMnth' (lines '124'-'138').
+src/com/fileupload/services/UploadFileService.java:125:	Found 'DD'-anomaly for variable 'noleadDate' (lines '125'-'144').
+src/com/fileupload/services/UploadFileService.java:125:	Found 'DD'-anomaly for variable 'noleadDate' (lines '125'-'147').
+src/com/fileupload/services/UploadFileService.java:127:	Found 'DD'-anomaly for variable 'finalTime' (lines '127'-'161').
+src/com/fileupload/services/UploadFileService.java:128:	Found 'DD'-anomaly for variable 'outputTimeZone' (lines '128'-'171').
+src/com/fileupload/services/UploadFileService.java:130:	Local variable 'strbff' could be declared final
+src/com/fileupload/services/UploadFileService.java:131:	Local variable 'onlyMonth' could be declared final
+src/com/fileupload/services/UploadFileService.java:131:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:132:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:133:	Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+src/com/fileupload/services/UploadFileService.java:133:	Local variable 'month' could be declared final
+src/com/fileupload/services/UploadFileService.java:133:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:134:	Avoid using Literals in Conditional Statements
+src/com/fileupload/services/UploadFileService.java:135:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:136:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:140:	Local variable 'onlyDate' could be declared final
+src/com/fileupload/services/UploadFileService.java:140:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:141:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:142:	Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+src/com/fileupload/services/UploadFileService.java:142:	Local variable 'date' could be declared final
+src/com/fileupload/services/UploadFileService.java:143:	Avoid using Literals in Conditional Statements
+src/com/fileupload/services/UploadFileService.java:144:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:145:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:149:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:150:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:152:	Local variable 'time' could be declared final
+src/com/fileupload/services/UploadFileService.java:152:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:153:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:155:	Local variable 'timeformat' could be declared final
+src/com/fileupload/services/UploadFileService.java:155:	When instantiating a SimpleDateFormat object, specify a Locale
+src/com/fileupload/services/UploadFileService.java:156:	Found 'DD'-anomaly for variable 'formatteddate' (lines '156'-'158').
+src/com/fileupload/services/UploadFileService.java:158:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:159:	Local variable 'output' could be declared final
+src/com/fileupload/services/UploadFileService.java:159:	When instantiating a SimpleDateFormat object, specify a Locale
+src/com/fileupload/services/UploadFileService.java:160:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:160:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:161:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:163:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/com/fileupload/services/UploadFileService.java:165:	Avoid printStackTrace(); use a logger call instead.
+src/com/fileupload/services/UploadFileService.java:165:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:168:	Local variable 'timeZone' could be declared final
+src/com/fileupload/services/UploadFileService.java:168:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:169:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:170:	Avoid using if statements without curly braces
+src/com/fileupload/services/UploadFileService.java:170:	Position literals first in String comparisons
+src/com/fileupload/services/UploadFileService.java:170:	Potential violation of Law of Demeter (object not created locally)
+src/com/fileupload/services/UploadFileService.java:173:	Local variable 'finalDateOutput' could be declared final
+src/com/fileupload/services/UploadFileService.java:175:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:176:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:181:	Parameter 'val' is not assigned and could be declared final
+src/com/fileupload/services/UploadFileService.java:181:	publicMethodCommentRequirement Required
+src/com/fileupload/services/UploadFileService.java:183:	Local variable 'moneyformat' could be declared final
+src/com/fileupload/services/UploadFileService.java:184:	Local variable 'valuedo' could be declared final
+src/com/fileupload/services/UploadFileService.java:185:	System.out.println is used
+src/com/fileupload/services/UploadFileService.java:186:	Local variable 'valueset' could be declared final
+src/com/fileupload/services/UploadFileService.java:187:	System.out.println is used

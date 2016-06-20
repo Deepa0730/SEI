@@ -1,0 +1,20 @@
+package com.fileupload.servicestest;
+
+import org.junit.Test;
+
+import com.fileupload.services.UploadFileService;
+
+public class UploadFileServiceTest {
+
+	UploadFileService service = new UploadFileService();
+
+	@Test
+	public void formatDatetest() {
+
+		String input = "";
+		String result = "";
+		result = service.formatDate(input);
+
+	}
+
+}
